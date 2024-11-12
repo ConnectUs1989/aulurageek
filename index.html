@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraGeek</title>
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Fuente personalizada Pixel NES -->
+  <link href="https://db.onlinewebfonts.com/c/f555c47ffc99d5fbcc445e615749dc38?family=Pixel+NES" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabecera -->
+  <header class="header">
+    <div class="header-content">
+      <img src="assets/logo.png" alt="AluraGeek Logo" class="logo">
+      <h1 class="header-title">AluraGeek</h1>
+    </div>
+  </header>
+
+  <!-- Main principal -->
+  <main class="main">
+    <!-- Sección de productos -->
+    <section class="product-section">
+      <h1>Mis Productos</h1>
+      <div class="product-container">
+        <!-- Aquí se mostrarán las tarjetas de productos dinámicamente -->
+      </div>
+      <p class="no-products">No se han agregado productos.</p>
+    </section>
+
+    <!-- Formulario para agregar o editar productos -->
+    <section class="form-section">
+      <h2 id="form-title">Agregar Producto</h2>
+      <form id="product-form">
+        <input type="text" id="product-name" placeholder="Nombre..." required>
+        <input type="number" id="product-price" placeholder="Precio..." required>
+        <input type="file" id="product-image" accept="image/*" capture="environment">
+        <button type="submit" class="styled-button">Guardar</button>
+        <button type="reset" class="styled-button">Limpiar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal para ver la imagen ampliada -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <!-- Script principal de JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    // Función para mostrar el modal con la imagen ampliada
+    function showImageModal(imageSrc) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+    }
+
+    // Cerrar el modal al hacer clic en el botón de cerrar
+    const closeModal = document.querySelector(".close");
+    closeModal.onclick = function () {
+      document.getElementById("imageModal").style.display = "none";
+    };
+  </script>
+</body>
+</html>
