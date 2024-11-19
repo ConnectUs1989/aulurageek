@@ -24,5 +24,5 @@ Para ejecutar este proyecto, necesitas:
 1. Clona el repositorio en tu servidor local:
 
    ```bash
-   git clone https://github.com/tu-usuario/alurageek.git
+   git clone https://github.com/ConnectUs1989/alurageek.git
 # aulurageek
